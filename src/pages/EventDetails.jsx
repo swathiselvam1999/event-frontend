@@ -22,7 +22,7 @@ const EventDetails = () => {
     const fetchEvent = async () => {
       try {
         dispatch(setEventLoading(true));
-        const res = await axios.get(`${API_URL}/api/events/${id}`);
+        const res = await axios.get(`${API_URL}api/events/${id}`);
         dispatch(setEvent(res.data));
         dispatch(setEventLoading(false));
       } catch (err) {

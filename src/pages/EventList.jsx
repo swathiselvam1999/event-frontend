@@ -16,7 +16,7 @@ const EventList = () => {
     const fetchEvents = async()=>{
       try{
         dispatch(setLoading(true))
-        const res = await axios.get(`${API_URL}/api/events`)
+        const res = await axios.get(`${API_URL}api/events`)
         dispatch(setEvents(res.data));
         dispatch(setLoading(false));
       }catch(err){
